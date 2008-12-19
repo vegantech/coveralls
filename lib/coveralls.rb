@@ -9,7 +9,11 @@ class Coveralls
         obj = obj.split("/",2).last if target_dir == "/app"
         begin
           # trigger the normal Rails mechanism to require files
-          obj.classify.constantize
+          if obj == "application" && target_dir.include?("controller")
+            ApplicationController
+          else
+            obj.classify.constantize
+          end
         rescue NameError, LoadError
           require obj
         end
