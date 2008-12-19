@@ -15,13 +15,13 @@ git submodule install
 Example
 =======
 
-After installing the plugin create a test or spec that contains Coverall.require_all_ruby_files
+After installing the plugin create a test or spec that contains Coveralls.require_all_ruby_files
 
 This will require all ruby files in /lib and /app if they haven't already been required.     
 
 You can also pass in an array of directories to require.
 
-Coverall.require_all_ruby_files ["/app/models","/app/lib"]
+Coveralls.require_all_ruby_files ["/app/models","/app/lib"]
 
 
 
